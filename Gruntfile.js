@@ -46,7 +46,12 @@ module.exports = function(grunt) {
         watch: {
             uglify: {
             	files: ['app/demo.js', 'app/index.html'],
-            	tasks: ['uglify']
+            	tasks: ['uglify'],
+            	options: {
+            		livereload: {
+            			port: 9000
+            		}
+            	}
             }
         }
 	});
