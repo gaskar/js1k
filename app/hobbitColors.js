@@ -25,8 +25,65 @@ function drawHobbit2(context){
 }
 function hardcodedHobbit(context){
 
-    /*hair*/
+    /*body*/
+    context.beginPath();
+    context.fillStyle="#5C0000";
+    context.moveTo( 198, 276 );
+    context.bezierCurveTo( 153, 205, 291, 172, 255, 274 );
+    context.fill();
+    context.beginPath();
+    context.fillStyle="#006600"
+    context.moveTo( 249, 324 );
+    context.bezierCurveTo( 316, 236, 121, 257, 214, 329 );
 
+    context.moveTo( 214, 329 );
+    context.bezierCurveTo( 210, 310, 240, 297, 249, 324);
+    context.fill();
+    context.stroke();
+
+    /*goti :P */
+    context.beginPath();
+    context.fillStyle="#663300";
+    context.moveTo( 255, 274 );
+    context.bezierCurveTo( 158, 284, 185, 260, 259, 268 );
+    context.fill();
+    context.stroke();
+
+    context.beginPath();
+    context.fillStyle="#FFCC00";
+    context.moveTo( 214, 268 );
+    context.bezierCurveTo( 272, 262, 210, 289, 214, 268 );
+    context.fill();
+    context.stroke();
+
+    /*hands _ feet*/
+    context.beginPath();
+    context.fillStyle="#E6CC80";
+
+    context.moveTo( 237, 330 );
+    context.bezierCurveTo( 329, 299, 353, 353, 234, 331 );
+
+    context.moveTo( 224, 329 );
+    context.bezierCurveTo( 111, 305, 130, 361, 224, 331 );
+    context.fill();
+    context.stroke();
+
+    context.moveTo( 257, 222 );
+    context.bezierCurveTo( 310, 204, 321, 245, 263, 236 );
+
+    context.moveTo( 205, 220 );
+    context.bezierCurveTo( 212, 273, 184, 275, 190, 233 );
+    context.fill();
+    context.stroke();
+
+    /*head*/
+    context.beginPath();
+    context.moveTo( 257, 135 );
+    context.bezierCurveTo( 284, 216, 191, 246, 191, 137 );
+    context.fill();
+    context.stroke();
+
+    /*hair*/
     context.beginPath();
     context.strokeStyle="#CC9900";
     context.lineWidth = 3;
@@ -45,67 +102,6 @@ function hardcodedHobbit(context){
     context.moveTo( 276, 189 );
     context.bezierCurveTo( 242, 176, 291, 143, 259, 135 );
     context.closePath();
-    context.stroke();
-    /*head*/
-
-    context.beginPath();
-    context.strokeStyle="#000A00";
-    context.lineWidth = 1;
-    context.moveTo( 269, 162 );
-    context.bezierCurveTo( 266, 211, 191, 246, 193, 152 );
-    context.stroke();
-    /*body*/
-
-    context.beginPath();
-    context.fillStyle="#006600";
-    context.moveTo( 248, 326 );
-    context.bezierCurveTo( 335, 146, 98, 204, 213, 328 );
-    context.fill();
-    context.closePath();
-    context.moveTo( 237, 330 );
-    context.bezierCurveTo( 251, 292, 189, 284, 224, 332 );
-
-
-
-    context.stroke();
-    /*goti :P */
-    context.beginPath();
-    context.fillStyle="#663300";
-    context.moveTo( 183, 270 );
-    context.bezierCurveTo( 292, 260, 294, 289, 180, 272 );
-    context.closePath();
-    context.fill();
-    context.stroke();
-
-    context.beginPath();
-    context.fillStyle="#FFCC00";
-    context.moveTo( 214, 268 );
-    context.bezierCurveTo( 272, 262, 210, 289, 214, 268 );
-    context.closePath();
-    context.fill();
-    context.stroke();
-
-    /*hands _ feet*/
-    context.beginPath();
-    context.fillStyle="#E6CC80";
-
-    context.moveTo( 237, 330 );
-    context.bezierCurveTo( 329, 299, 353, 353, 234, 331 );
-
-    context.moveTo( 224, 329 );
-    context.bezierCurveTo( 111, 305, 130, 361, 224, 331 );
-    context.closePath();
-    context.fill();
-    context.stroke();
-
-    context.beginPath();
-    context.moveTo( 257, 222 );
-    context.bezierCurveTo( 310, 204, 321, 245, 263, 236 );
-
-    context.moveTo( 205, 220 );
-    context.bezierCurveTo( 212, 273, 184, 275, 190, 233 );
-    context.closePath();
-    context.fill();
     context.stroke();
 }
 
