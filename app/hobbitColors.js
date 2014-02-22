@@ -3,29 +3,7 @@
  */
 var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
-/*smallest functions for drawing dragins and hobbit :(( */
-function drawDragon2(context){
-    var startingPoints = [[82,30], [82,30], [65,28], [65,28], [53,32], [53,32], [68,33], [67,34], [71,21], [71,21], [69,22]],
-        bezierPoints = [[83,28,89,28,89,31 ], [83,28,78,27,76,28], [63,20,77,20,76,28], [63,24,57,28,59,29], [52,29,56,27,59,29], [48,27,75,13,89,30], [73,28,65,26,69,22], [74,26,72,24,70,22], [70,20,69,21,70,22], [70,15,70,18,68,20], [69,20,69,21,68,20]], length = 11;
-    context.beginPath();
-    context.fillStyle="#CC0000";
-    for( var i = 0; i < length; i++ ) {
-        context.moveTo( 10*startingPoints[i][0], 10*startingPoints[i][1] );
-        context.bezierCurveTo( 10*bezierPoints[i][0], 10*bezierPoints[i][1], 10*bezierPoints[i][2], 10*bezierPoints[i][3], 10*bezierPoints[i][4], 10*bezierPoints[i][5] );
-    }
-    context.fill();
-    context.stroke();
-}
 
-function drawHobbit2(context){
-    var startingPoints = [[18,17], [20,16], [25,16], [29,17], [28,19], [27,16], [25,33], [24,33], [24,33], [22,33], [18,27], [21,27], [26,22], [20,22]],
-        bezierPoints = [[16,12,21,16,19,13], [23,14,20,15,20,13], [24,11,21,17,21,12], [22,19,28,14,23,12], [24,18,29,14,26,13], [27,21,19,25,19,15], [33,15,10,20,21,33], [25,29,19,28,22,33], [33,30,35,35,23,33], [11,30,13,36,22,33], [29,26,29,29,18,27], [27,26,21,29,21,27], [31,20,32,24,26,24], [21,27,18,27,19,23]], length = 14;
-    for( var i = 0; i < length; i++ ) {
-        context.moveTo( 10*startingPoints[i][0], 10*startingPoints[i][1] );
-        context.bezierCurveTo( 10*bezierPoints[i][0], 10*bezierPoints[i][1], 10*bezierPoints[i][2], 10*bezierPoints[i][3], 10*bezierPoints[i][4], 10*bezierPoints[i][5] );
-    }
-    context.stroke();
-}
 function hardcodedHobbit(context){
 
     /*body*/
@@ -116,43 +94,42 @@ function hardcodedHobbit(context){
 }
 function hardcodedDragon(context){
     context.beginPath();
-    context.strokeStyle="#8D1919";
+    context.fillStyle="#8D1919";
 
-    context.moveTo( 615, 207 );
-    context.bezierCurveTo( 769, 220, 864, 296, 908, 357 );
+    var startingX = 967, startingY = 305, firstX = 943, firstY = 225, secondX = 834, secondY = 165, endingX = 724, endingY = 163;
 
-    context.moveTo( 615, 207 );
-    context.bezierCurveTo( 584, 192, 633, 166, 641, 193 );
+    context.moveTo( startingX, startingY );
+    context.bezierCurveTo( firstX, firstY, secondX, secondY, endingX, endingY );
 
-    context.moveTo( 531, 189 );
-    context.bezierCurveTo( 593, 117, 576, 106, 643, 193 );
+//    context.moveTo( startingX - 242, startingY - 142 )
+    context.bezierCurveTo( firstX - 273, firstY - 58, secondX - 142, secondY - 51, endingX - 6, endingY - 15 );
 
-    context.moveTo( 531, 189 );
-    context.bezierCurveTo( 550, 168, 580, 194, 553, 205 );
+//    context.moveTo( startingX - 250, startingY - 157 )
+    context.bezierCurveTo( firstX - 268, firstY - 140, secondX - 161, secondY - 78, endingX - 97, endingY - 17 );
 
-    context.moveTo( 326, 347 );
-    context.bezierCurveTo( 387, 255, 498, 217, 553, 205 );
+//    context.moveTo( startingX - 339, startingY - 159 )
+    context.bezierCurveTo( firstX - 297, firstY - 105, secondX - 166, secondY - 11, endingX - 91, endingY );
 
-    context.moveTo( 326, 347 );
-    context.bezierCurveTo( 535, 172, 376, 419, 538, 284 );
+//    context.moveTo( startingX - 333, startingY - 142 )
+    context.bezierCurveTo( firstX - 373, firstY - 60, secondX - 371, secondY + 48, endingX - 279, endingY + 122 );
 
-    context.moveTo( 562, 223 );
-    context.bezierCurveTo( 549, 231, 497, 269, 538, 284 );
+//    context.moveTo( startingX - 521, startingY - 21 )
+    context.bezierCurveTo( firstX - 355, firstY - 104, secondX - 286, secondY + 147, endingX - 92, endingY + 63 );
 
-    context.moveTo( 562, 223 );
-    context.bezierCurveTo( 539, 347, 640, 255, 652, 407 );
+//    context.moveTo( startingX - 336, startingY - 79 )
+    context.bezierCurveTo( firstX - 329, firstY - 1, secondX - 225, secondY + 26, endingX - 76, endingY + 16 );
 
-    context.moveTo( 612, 228 );
-    context.bezierCurveTo( 576, 343, 671, 246, 652, 407 );
+//    context.moveTo( startingX - 320, startingY - 126 )
+    context.bezierCurveTo( firstX - 304, firstY + 48, secondX - 131, secondY + 26, endingX - 44, endingY + 153 );
 
-    context.moveTo( 612, 228 );
-    context.bezierCurveTo( 576, 343, 671, 246, 652, 407 );
+//    context.moveTo( startingX - 287, startingY + 9 )
+    context.bezierCurveTo( firstX - 196, firstY + 18, secondX - 166, secondY + 73, endingX - 27, endingY + 18 );
 
-    context.moveTo( 612, 228 );
-    context.bezierCurveTo( 639, 245, 668, 272, 645, 283 );
+//    context.moveTo( startingX - 270, startingY - 124 )
+    context.bezierCurveTo( firstX - 215, firstY - 34, secondX - 87, secondY + 50, endingX, endingY + 59 );
 
-    context.moveTo( 907, 355 );
-    context.bezierCurveTo( 550, 114, 819, 380, 645, 283 );
+//    context.moveTo( startingX - 242, startingY - 83 )
+    context.bezierCurveTo( firstX - 112, firstY + 89, secondX - 79, secondY - 74, endingX + 242, endingY + 141 );
 
     context.closePath();
     context.fill();
@@ -160,4 +137,4 @@ function hardcodedDragon(context){
 }
 
 hardcodedHobbit(context);
-//hardcodedDragon(context);
+hardcodedDragon(context);
