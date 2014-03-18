@@ -136,5 +136,27 @@ function hardcodedDragon(context){
     context.stroke();
 }
 
+function drawFire(ctx, xoff, yoff){
+  ctx.beginPath();
+  context.fillStyle="#E68A00";
+  ctx.moveTo(394 + xoff, 99 + yoff);
+  ctx.bezierCurveTo(458 + xoff, 183 + yoff, 439 + xoff, 244 + yoff, 385 + xoff, 282 + yoff);
+  ctx.bezierCurveTo(378 + xoff, 287 + yoff, 404 + xoff, 264 + yoff, 393 + xoff, 233 + yoff);
+  ctx.bezierCurveTo(386 + xoff, 212 + yoff, 405 + xoff, 241 + yoff, 353 + xoff, 270 + yoff);
+  ctx.bezierCurveTo(340 + xoff, 277 + yoff, 358 + xoff, 248 + yoff, 350 + xoff, 191 + yoff);
+  ctx.bezierCurveTo(348 + xoff, 177 + yoff, 312 + xoff, 271 + yoff, 329 + xoff, 280 + yoff);
+  ctx.bezierCurveTo(338 + xoff, 285 + yoff, 251 + xoff, 236 + yoff, 312 + xoff, 119 + yoff);
+  ctx.bezierCurveTo(313 + xoff, 118 + yoff, 315 + xoff, 131 + yoff, 328 + xoff, 163 + yoff);
+  ctx.bezierCurveTo(334 + xoff, 177 + yoff, 321 + xoff, 88 + yoff, 366 + xoff, 62 + yoff);
+  ctx.bezierCurveTo(373 + xoff, 58 + yoff, 373 + xoff, 154 + yoff, 398 + xoff, 188 + yoff);
+  ctx.bezierCurveTo(407 + xoff, 200 + yoff, 410 + xoff, 139 + yoff, 395 + xoff, 100 + yoff);
+  context.closePath();
+  context.fill();
+  ctx.stroke();
+
+}
+
 hardcodedHobbit(context);
 hardcodedDragon(context);
+drawFire(context,100,100)
+
