@@ -120,22 +120,22 @@ function hardcodedDragon(context,xoff, yoff){
 
 function drawFire(context, xoff, yoff){
 
-    xoff-=270;
-    yoff-=60;//TODO: substract 140 from all :P
+    xoff-=135;
+    yoff-=30;//TODO: substract 140 from all :P
 
     context.beginPath();
     context.fillStyle="#E68A00";
-    context.moveTo(394 + xoff, 99 + yoff);
-    context.bezierCurveTo(458 + xoff, 183 + yoff, 439 + xoff, 244 + yoff, 385 + xoff, 282 + yoff);
-    context.bezierCurveTo(378 + xoff, 287 + yoff, 404 + xoff, 264 + yoff, 393 + xoff, 233 + yoff);
-    context.bezierCurveTo(386 + xoff, 212 + yoff, 405 + xoff, 241 + yoff, 353 + xoff, 270 + yoff);
-    context.bezierCurveTo(340 + xoff, 277 + yoff, 358 + xoff, 248 + yoff, 350 + xoff, 191 + yoff);
-    context.bezierCurveTo(348 + xoff, 177 + yoff, 312 + xoff, 271 + yoff, 329 + xoff, 280 + yoff);
-    context.bezierCurveTo(338 + xoff, 285 + yoff, 251 + xoff, 236 + yoff, 312 + xoff, 119 + yoff);
-    context.bezierCurveTo(313 + xoff, 118 + yoff, 315 + xoff, 131 + yoff, 328 + xoff, 163 + yoff);
-    context.bezierCurveTo(334 + xoff, 177 + yoff, 321 + xoff, 88 + yoff, 366 + xoff, 62 + yoff);
-    context.bezierCurveTo(373 + xoff, 58 + yoff, 373 + xoff, 154 + yoff, 398 + xoff, 188 + yoff);
-    context.bezierCurveTo(407 + xoff, 200 + yoff, 410 + xoff, 139 + yoff, 395 + xoff, 100 + yoff);
+    context.moveTo(197 + xoff, 50 + yoff);
+    context.bezierCurveTo(229 + xoff, 92 + yoff, 220 + xoff, 122 + yoff, 193 + xoff, 141 + yoff);
+    context.bezierCurveTo(189 + xoff, 144 + yoff, 202 + xoff, 132 + yoff, 197 + xoff, 117 + yoff);
+    context.bezierCurveTo(193 + xoff, 106 + yoff, 203 + xoff, 121 + yoff, 177 + xoff, 135 + yoff);
+    context.bezierCurveTo(170 + xoff, 139 + yoff, 179 + xoff, 124 + yoff, 175 + xoff, 96 + yoff);
+    context.bezierCurveTo(174 + xoff, 89 + yoff, 156 + xoff, 136 + yoff, 165 + xoff, 140 + yoff);
+    context.bezierCurveTo(169 + xoff, 143 + yoff, 126 + xoff, 118 + yoff, 156 + xoff, 60 + yoff);
+    context.bezierCurveTo(157 + xoff, 59 + yoff, 158 + xoff, 66 + yoff, 164 + xoff, 82 + yoff);
+    context.bezierCurveTo(167 + xoff, 89 + yoff, 161 + xoff, 44 + yoff, 183 + xoff, 31 + yoff);
+    context.bezierCurveTo(187 + xoff, 29 + yoff, 187 + xoff, 77 + yoff, 199 + xoff, 94 + yoff);
+    context.bezierCurveTo(204 + xoff, 100 + yoff, 205 + xoff, 70 + yoff, 198 + xoff, 50 + yoff);
     context.closePath();
     context.fill();
     context.stroke();
@@ -144,4 +144,4 @@ function drawFire(context, xoff, yoff){
 //
 //hardcodedHobbit(context,0,0);
 //hardcodedDragon(context,-200,-140);
-//drawFire(context,0,0)
+drawFire(context,0,0)
