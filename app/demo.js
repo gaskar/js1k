@@ -17,7 +17,13 @@ var i = 0,radius = 200,hobbits = [[Math.random() * 700, 0, .7], [Math.random() *
     };
 var m=function(x,y,i){
 //    while(hobbits[i][1]< 300){
-
+    var k = 1;
+    setTimeout(function() {
+        drawFire(c, x, y + 0.5);
+        k++;
+        if(k < 25)
+            setTimeout(arguments.callee, 16);
+    }, 16);
 //    }
 };
 
@@ -26,9 +32,15 @@ a.onclick = function(e) {
     {
         if(0 < parseInt(e.x - hobbits[i][0]) && parseInt(e.x - hobbits[i][0]) < 180 && 0 < (e.y - hobbits[i][1]) && (e.y - hobbits[i][1]) <= 200){
 
+
             m(hobbits[i][0],hobbits[i][1],i);
-//            hobbits[i][1] = -radius;
-//            hobbits[i][0] = Math.random() * 700;
+
+            setTimeout(function() {
+                hobbits[i][1] = -radius*2;
+                hobbits[i][2] += 0.3;
+                hobbits[i][0] = Math.random() * 700;
+            }, 80);
+            break
         }
 
     }
