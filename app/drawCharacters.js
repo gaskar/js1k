@@ -94,7 +94,7 @@ function hardcodedHobbit(c,xoff, yoff){
 
 }
 
-function hardcodedDragon(c,xoff, yoff){
+function hardcodedDragono(c,xoff, yoff){
     c.beginPath();
     c.fillStyle="#8D1919";
     c.moveTo( 967 + xoff, 305 + yoff );
@@ -114,7 +114,7 @@ function hardcodedDragon(c,xoff, yoff){
     c.stroke();
 }
 
-function drawFire(c, xoff, yoff){
+function drawFireo(c, xoff, yoff){
 
     xoff-=135;
     yoff-=30;//TODO: substract 140 from all :P

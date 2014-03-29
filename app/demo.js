@@ -47,3 +47,50 @@ a.onclick = function(e) {
 };
 
 n();
+
+
+function hardcodedDragon(c,xoff, yoff){
+    c.beginPath();
+    c.fillStyle="#8D1919";
+    c.moveTo( 967 + xoff, 305 + yoff );
+    var convertedStr = 'ίá͂¥˔£ʞ§ʴrˎʣUʡWɳʆxʜɹ£Ⱥ¥ǏÕƽĝɌyȤĸɸâɦàɡ¿ʈ³ɿđʿ¿ʨļ˫óʜîʹµ˘¿˫×˔Þ̿ĺ˳[φİ ';
+    for(var i = 0; i < convertedStr.length; i+=6) {
+        c.bezierCurveTo(convertedStr.charCodeAt(i) + xoff,
+                convertedStr.charCodeAt(i + 1) + yoff,
+                convertedStr.charCodeAt(i + 2) + xoff,
+                convertedStr.charCodeAt(i + 3) + yoff,
+                convertedStr.charCodeAt(i + 4)+ xoff,
+                convertedStr.charCodeAt(i + 5)+ yoff);
+    }
+    c.closePath();
+    c.fill();
+    c.stroke();
+}
+
+
+
+
+function drawFire(c, xoff, yoff){
+
+    xoff-=135;
+    yoff-=30;//TODO: substract 140 from all :P
+
+    c.beginPath();
+    c.fillStyle="#E68A00";
+    c.moveTo(197 + xoff, 50 + yoff);
+    var convertedStr = 'å[ÜzÁ½ÊÅuÁjËy±ª³|¯`®Y¥©~v<;B¤R§Y¡,·»»MÇ^ÌdÍFÆ2 ';
+    for(var i = 0; i < convertedStr.length; i+=6) {
+        c.bezierCurveTo(convertedStr.charCodeAt(i) + xoff,
+                convertedStr.charCodeAt(i + 1) + yoff,
+                convertedStr.charCodeAt(i + 2) + xoff,
+                convertedStr.charCodeAt(i + 3) + yoff,
+                convertedStr.charCodeAt(i + 4)+ xoff,
+                convertedStr.charCodeAt(i + 5)+ yoff);
+    }
+    c.closePath();
+    c.fill();
+    c.stroke();
+
+}
+
+    console.log(str);
