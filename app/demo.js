@@ -3,10 +3,12 @@ var b = document.body;
 var c = a.getContext('2d');
 
 
-
+//hobbits array
+//first argument - position x
+//second argument - position y
+// third argument - acceleration
 var i = 0,radius = 200,hobbits = [[Math.random() * 700, 0, .7], [Math.random() * 700, 0, .5], [Math.random() * 700, 0, 1.3], [Math.random() * 700, 0, 1.7], [Math.random() * 700,0, 1.9]]
     ,n = function() {
-//        hardcodedDragon(c,0,0);
         c.beginPath();
         c.fillStyle="#FFF";
         c.fillRect(0,0,4E4,4E4);
@@ -14,6 +16,7 @@ var i = 0,radius = 200,hobbits = [[Math.random() * 700, 0, .7], [Math.random() *
         for(i in hobbits){
             hardcodedHobbit(c,hobbits[i][0],hobbits[i][1] = hobbits[i][1] + hobbits[i][2])
         }
+                hardcodedDragon(c,0,0);
         setTimeout(n, 16);
     };
 var m=function(x,y,i){
