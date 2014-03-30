@@ -64,26 +64,10 @@ function hardcodedHobbit(c,xoff, yoff){
 
     /*head*/
     c.beginPath();
-    /*c.moveTo( 257, 135 );
-     c.bezierCurveTo( 284, 216, 191, 246, 191, 137 );*/
-    c.moveTo( 247 + xoff, 176 + yoff );
-    c.bezierCurveTo( 263 + xoff, 215 + yoff, 191 + xoff, 246 + yoff, 198 + xoff, 157 + yoff );
-    c.fill();
-    c.stroke();
-
-   //hair
-
-    c.beginPath();
-    c.fillStyle="#CC9900";
-    c.moveTo( 193 + xoff, 219 + yoff );
-    c.bezierCurveTo( 157 + xoff, 177 + yoff, 219 + xoff, 204 + yoff, 211 + xoff, 160 + yoff );
-    c.bezierCurveTo( 235 + xoff, 164 + yoff, 208 + xoff, 182 + yoff, 231 + xoff, 184 + yoff );
-    c.bezierCurveTo( 243 + xoff, 175 + yoff, 236 + xoff, 171 + yoff, 228 + xoff, 155 + yoff );
-    c.bezierCurveTo( 269 + xoff, 186 + yoff, 235 + xoff, 180 + yoff, 237 + xoff, 215 + yoff );
-    c.bezierCurveTo( 275 + xoff, 188 + yoff, 252 + xoff, 138 + yoff, 207 + xoff, 153 + yoff );
-    c.bezierCurveTo( 201 + xoff, 173 + yoff, 164 + xoff, 179 + yoff, 192 + xoff, 218 + yoff );
-
-    c.closePath();
+    
+   
+    c.moveTo( 204 + xoff, 167 + yoff );
+    c.bezierCurveTo( 180 + xoff, 221 + yoff, 273 + xoff, 255+ yoff, 252 + xoff, 153 + yoff );
     c.fill();
     c.stroke();
 
@@ -134,22 +118,31 @@ function drawFireo(c, xoff, yoff){
 }
 
 function drawHair(c,xoff, yoff){
+
 c.beginPath();
 c.fillStyle="#CC9900";
-c.moveTo( 143 + xoff, 212 + yoff );
-c.bezierCurveTo( 127 + xoff, 170 + yoff, 169 + xoff, 197 + yoff, 161 + xoff, 153 + yoff );
-c.bezierCurveTo( 185 + xoff, 157 + yoff, 158 + xoff, 175 + yoff, 181 + xoff, 177 + yoff );
-c.bezierCurveTo( 193 + xoff, 163 + yoff, 186 + xoff, 164 + yoff, 178 + xoff, 148 + yoff );
-c.bezierCurveTo( 219 + xoff, 179 + yoff, 185 + xoff, 173 + yoff, 187 + xoff, 208 + yoff );
-c.bezierCurveTo( 225 + xoff, 181 + yoff, 202 + xoff, 131 + yoff, 157 + xoff, 146 + yoff );
-c.bezierCurveTo( 151 + xoff, 166 + yoff, 114 + xoff, 172 + yoff, 142 + xoff, 211 + yoff );
 
-c.closePath();
+ xoff-=130;
+ yoff-=125;
+
+c.moveTo( 193+ xoff, 203+ yoff);
+c.bezierCurveTo( 177+ xoff, 161+ yoff , 219+ xoff, 188+ yoff , 211+ xoff, 144+ yoff  );
+c.bezierCurveTo( 235+ xoff, 148+ yoff , 208+ xoff, 166+ yoff , 231+ xoff, 168+ yoff  );
+c.bezierCurveTo( 243+ xoff, 154+ yoff , 236+ xoff, 155+ yoff , 228+ xoff, 139+ yoff  );
+c.bezierCurveTo( 269+ xoff, 170+ yoff , 235+ xoff, 164+ yoff , 237+ xoff, 199+ yoff  );
+c.bezierCurveTo( 268+ xoff, 197+ yoff , 255+ xoff, 121+ yoff , 216+ xoff, 126+ yoff  );
+c.bezierCurveTo( 185+ xoff, 128+ yoff , 169+ xoff, 206+ yoff , 192+ xoff, 203+ yoff  );
+
+
+
     c.fill();
     c.stroke();
+    c.closePath();
+
 }
 
-// drawHair(c,0,0);
-//hardcodedHobbit(c,0,0);
+  
+// hardcodedHobbit(c,0,0);
+// drawHair(c,0,0);  
 //hardcodedDragon(c,0,0);
 //drawFire(c,0,0)
