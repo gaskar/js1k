@@ -7,18 +7,21 @@ var b = document.body;
 var c = a.getContext('2d');
 
 
-function hardcodedHobbit(c,xoff, yoff){
+function hardcodedHobbito(c,xoff, yoff){
 
     xoff-=140;
     yoff-=140;//TODO: substract 140 from all :P
     /*body*/
     c.beginPath();
-    c.fillStyle="#5C0000";
+    c.fillStyle="#600";
     c.moveTo( 198 + xoff, 276 + yoff );
     c.bezierCurveTo( 153 + xoff, 205 + yoff, 291 + xoff, 172 + yoff, 255 + xoff, 274 + yoff );
     c.fill();
+    c.stroke();
+
+
     c.beginPath();
-    c.fillStyle="#006600"
+    c.fillStyle="#353"
     c.moveTo( 249 + xoff, 324 + yoff );
     c.bezierCurveTo( 316 + xoff, 236 + yoff, 121 + xoff, 257 + yoff, 214 + xoff, 329 + yoff );
 
@@ -44,7 +47,7 @@ function hardcodedHobbit(c,xoff, yoff){
 
     /*hands _ feet*/
     c.beginPath();
-    c.fillStyle="#E6CC80";
+    c.fillStyle="#EDA";
 
     c.moveTo( 237 + xoff, 330 + yoff );
     c.bezierCurveTo( 329 + xoff, 299 + yoff, 353 + xoff, 353 + yoff, 234 + xoff, 331 + yoff );
@@ -54,6 +57,9 @@ function hardcodedHobbit(c,xoff, yoff){
     c.fill();
     c.stroke();
 
+    c.beginPath();
+    c.fillStyle = "#EDA";
+
     c.moveTo( 257 + xoff, 222  + yoff);
     c.bezierCurveTo( 310 + xoff, 204 + yoff, 321 + xoff, 245 + yoff, 263 + xoff, 236 + yoff );
 
@@ -62,14 +68,18 @@ function hardcodedHobbit(c,xoff, yoff){
     c.fill();
     c.stroke();
 
+
     /*head*/
     c.beginPath();
-    
-   
+    c.fillStyle="#EDA";
     c.moveTo( 204 + xoff, 167 + yoff );
     c.bezierCurveTo( 180 + xoff, 221 + yoff, 273 + xoff, 255+ yoff, 252 + xoff, 153 + yoff );
+
+   
     c.fill();
     c.stroke();
+
+    c.closePath();
 
 }
 
@@ -142,7 +152,7 @@ c.bezierCurveTo( 185+ xoff, 128+ yoff , 169+ xoff, 206+ yoff , 192+ xoff, 203+ y
 }
 
   
-// hardcodedHobbit(c,0,0);
-// drawHair(c,0,0);  
+hardcodedHobbito(c,0,0);
+drawHair(c,0,0);  
 //hardcodedDragon(c,0,0);
 //drawFire(c,0,0)

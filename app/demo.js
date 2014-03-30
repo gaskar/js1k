@@ -10,7 +10,8 @@ var i = 0,radius = 200,hobbits = [[Math.random() * 700, 0, .7], [Math.random() *
         c.fillRect(0,0,4E4,4E4);
         c.fill();
         for(i in hobbits){
-            hardcodedHobbit(c,hobbits[i][0] = hobbits[i][0]+hobbits[i][2],hobbits[i][1] = hobbits[i][1] + hobbits[i][2])
+            hardcodedHobbit(c,hobbits[i][0] ,hobbits[i][1] = hobbits[i][1] + hobbits[i][2]);
+            drawHair(c,hobbits[i][0] ,hobbits[i][1] = hobbits[i][1] + hobbits[i][2]);
         }
         hardcodedDragon(c,-220,670);
         setTimeout(n, 16);
@@ -45,6 +46,38 @@ a.onclick = function(e) {
 };
 
 n();
+
+function hardcodedHobbit(c,xoff, yoff){
+
+    xoff-=140;
+    yoff-=140;//TODO: substract 140 from all :P
+    /*body*/
+    var convertedStr = '؀ÆĔÍģ¬ÿĒ͓ùńļìyāÖŉÖŉÒĶðĩùńذÿĒĜ¹ĄăČ࿀ÖČĐĆÒġÖČ໚íŊŉīššêŋàŉoıũàŋ໚āÞĶÌŁõćìÍÜÔđ¸ē¾é໚÷°ć×¿öÆ ';
+
+    var j = 1;
+    for(var i = 0; i < convertedStr.length; i += 2 +(j * 8)) {
+        j = convertedStr.charCodeAt(i);
+        var color = convertedStr.charCodeAt(i + 1).toString(16);
+        c.beginPath();
+        c.fillStyle="#" + color
+        for(var k = i + 2; k < i + (j * 8); k+=8) {
+            c.moveTo( convertedStr.charCodeAt(k) + xoff, convertedStr.charCodeAt(k + 1) + yoff );
+
+            c.bezierCurveTo(convertedStr.charCodeAt(k + 2) + xoff,
+                    convertedStr.charCodeAt(k + 3) + yoff,
+                    convertedStr.charCodeAt(k + 4) + xoff,
+                    convertedStr.charCodeAt(k + 5) + yoff,
+                    convertedStr.charCodeAt(k + 6)+ xoff,
+                    convertedStr.charCodeAt(k + 7)+ yoff);
+        }
+
+        c.fill();
+        c.stroke();
+    }
+
+    c.closePath();
+
+}
 
 
 function hardcodedDragon(c,xoff, yoff){
@@ -90,5 +123,3 @@ function drawFire(c, xoff, yoff){
     c.stroke();
 
 }
-
-    console.log(str);
