@@ -1,8 +1,9 @@
 var a = document.getElementById('thecanvas');
 var b = document.body;
 var c = a.getContext('2d');
-
-var i = 0,r = 200,f = [1,1,1,1,1];
+c.font = '100pt Curier';
+          
+var i = 0,r = 200,q=0,d=a.height,f = [1,1,1,1,1];
 for(i in f)
     f[i]=[Math.random() * 700, 0, .7];
 
@@ -11,9 +12,14 @@ function n(){
         c.fillStyle="#FFF";
         c.fillRect(0,0,4E4,4E4);
         c.fill();
-        for(i in f)
+        for(i in f){
+             if(f[i][1]>=d){
+                n=undefined;
+            }
             hh(f[i][0] ,f[i][1] = f[i][1] + f[i][2]),h(f[i][0] ,f[i][1] = f[i][1] + f[i][2],'?S/)YDQiN.e0q"j#b2i,kOM}V7\'V>S ',"#C90")
+        }
         h(-220,670,'χıίá͂¥˔£ʞ§ʴrˎʣUʡWɳʆxʜɹ£Ⱥ¥ǏÕƽĝɌyȤĸɸâɦàɡ¿ʈ³ɿđʿ¿ʨļ˫óʜîʹµ˘¿˫×˔Þ̿ĺ˳[φİ ',"#8D1919");
+        c.fillText(q, d*0.7, d*0.9);
         setTimeout(n, 16);
     }
 function m(x,y){
@@ -29,6 +35,7 @@ function m(x,y){
 a.onclick = function(e) {
     for(var i in f)
         if(0 < e.x - f[i][0] && e.x - f[i][0] < 180 && 0 < (e.y - f[i][1]) && (e.y - f[i][1]) <= 200){
+            q++;
             m(f[i][0],f[i][1],i);
             f[i][1] = -r*2;
             f[i][2] += 0.3;
