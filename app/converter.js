@@ -1,18 +1,83 @@
 var regexp = /\d+/g
-var nums = 'c.bezierCurveTo( 943 + xoff, 225 + yoff, 834 + xoff, 165 + yoff, 724 + xoff, 163 + yoff );\
-c.bezierCurveTo( 670 + xoff, 167 + yoff, 692 + xoff, 114 + yoff, 718 + xoff, 148 + yoff );\
-c.bezierCurveTo( 675 + xoff, 85 + yoff, 673 + xoff, 87 + yoff, 627 + xoff, 146 + yoff );\
-c.bezierCurveTo( 646 + xoff, 120 + yoff, 668 + xoff, 154 + yoff, 633 + xoff, 163 + yoff );\
-c.bezierCurveTo( 570 + xoff, 165 + yoff, 463 + xoff, 213 + yoff, 445 + xoff, 285 + yoff );\
-c.bezierCurveTo( 588 + xoff, 121 + yoff, 548 + xoff, 312 + yoff, 632 + xoff, 226  + yoff);\
-c.bezierCurveTo( 614 + xoff, 224 + yoff, 609 + xoff, 191 + yoff, 648 + xoff, 179 + yoff );\
-c.bezierCurveTo( 639 + xoff, 273 + yoff, 703 + xoff, 191 + yoff, 680 + xoff, 316 + yoff );\
-c.bezierCurveTo( 747 + xoff, 243 + yoff, 668 + xoff, 238 + yoff, 697 + xoff, 181 + yoff );\
-c.bezierCurveTo( 728 + xoff, 191 + yoff, 747 + xoff, 215 + yoff, 724 + xoff, 222 + yoff );\
-c.bezierCurveTo( 831 + xoff, 314 + yoff, 755 + xoff, 91 + yoff, 966 + xoff, 304  + yoff);'.match(regexp);
+var nums = 'c.beginPath();\
+    c.fillStyle="#5C0000";\
+c.moveTo( 198 + xoff, 276 + yoff );\
+c.bezierCurveTo( 153 + xoff, 205 + yoff, 291 + xoff, 172 + yoff, 255 + xoff, 274 + yoff );\
+c.fill();\
+c.stroke();\
+\
+\
+c.beginPath();\
+c.fillStyle="#006600"\
+c.moveTo( 249 + xoff, 324 + yoff );\
+c.bezierCurveTo( 316 + xoff, 236 + yoff, 121 + xoff, 257 + yoff, 214 + xoff, 329 + yoff );\
+\
+c.moveTo( 214 + xoff, 329 + yoff );\
+c.bezierCurveTo( 210 + xoff, 310 + yoff, 240 + xoff, 297 + yoff, 249 + xoff, 324 + yoff);\
+c.fill();\
+c.stroke();\
+\
+c.beginPath();\
+c.fillStyle="#663300";\
+c.moveTo( 255 + xoff, 274 + yoff );\
+c.bezierCurveTo( 158 + xoff, 284 + yoff, 185 + xoff, 260 + yoff, 259 + xoff, 268 + yoff );\
+c.fill();\
+c.stroke();\
+\
+c.beginPath();\
+c.fillStyle="#060080";\
+c.moveTo( 214 + xoff, 268 + yoff );\
+c.bezierCurveTo( 272 + xoff, 262 + yoff, 210 + xoff, 289 + yoff, 214 + xoff, 268 + yoff );\
+c.fill();\
+c.stroke();\
+\
+c.beginPath();\
+c.fillStyle="#060080";\
+c.moveTo( 237 + xoff, 330 + yoff );\
+c.bezierCurveTo( 329 + xoff, 299 + yoff, 353 + xoff, 353 + yoff, 234 + xoff, 331 + yoff );\
+\
+c.moveTo( 224 + xoff, 329 + yoff );\
+c.bezierCurveTo( 111 + xoff, 305 + yoff, 130 + xoff, 361 + yoff, 224 + xoff, 331  + yoff);\
+c.fill();\
+c.stroke();\
+\
+c.beginPath();\
+c.fillStyle = "#060080";\
+\
+c.moveTo( 257 + xoff, 222  + yoff);\
+c.bezierCurveTo( 310 + xoff, 204 + yoff, 321 + xoff, 245 + yoff, 263 + xoff, 236 + yoff );\
+\
+c.moveTo( 205 + xoff, 220 + yoff );\
+c.bezierCurveTo( 212 + xoff, 273 + yoff, 184 + xoff, 275 + yoff, 190 + xoff, 233 + yoff );\
+c.fill();\
+c.stroke();\
+c.beginPath();\
+c.fillStyle="#060080";\
+c.moveTo( 247 + xoff, 176 + yoff );\
+c.bezierCurveTo( 263 + xoff, 215 + yoff, 191 + xoff, 246 + yoff, 198 + xoff, 157 + yoff );\
+c.fill();\
+c.stroke();'.match(regexp);
+console.log(nums);
 var str = '';
-for(var i = 0; i < nums.length; i++) {
-    str += String.fromCharCode(nums[i]);
-}
 
+
+var nums = [
+    "1", "600", "198", "276", "153", "205", "291", "172", "255", "274",
+    "2", "353", "249", "324", "316", "236", "121", "257", "214", "329", "214", "329", "210", "310", "240", "297", "249", "324",
+    "1", "630", "255", "274", "158", "284", "185", "260", "259", "268",
+    "1", "FC0", "214", "268", "272", "262", "210", "289", "214", "268",
+    "2", "EDA", "237", "330", "329", "299", "353", "353", "234", "331", "224", "329", "111", "305", "130", "361", "224", "331",
+    "2", "EDA", "257", "222", "310", "204", "321", "245", "263", "236", "205", "220", "212", "273", "184", "275", "190", "233",
+    "1", "EDA", "247", "176", "263", "215", "191", "246", "198", "157"];
+
+var j = 1;
+for(var i = 0; i < nums.length; i += 2 +(j * 8)) {
+    str += String.fromCharCode(parseInt(nums[i]));
+    str += String.fromCharCode(parseInt('0x' + nums[i + 1]));
+    j = parseInt(nums[i]);
+    for(var k = i + 2; k < i + 2 + (j * 8); k++) {
+        str += String.fromCharCode(parseInt(nums[k]));
+    }
+
+}
 console.log(str);
