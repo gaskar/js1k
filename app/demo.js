@@ -10,11 +10,11 @@ for(i in f)
 function n(){
     c.beginPath();
     c.fillStyle="#FFF";
-    c.fillRect(0,0,4E4,4E4);
+    c.fillRect(0,0,d,d);
     c.font = '6em Curier';
     c.fill();
     for(i in f)
-        f[i][1]>=d?n=undefined:1,hh(f[i][0] ,f[i][1] = f[i][1] + f[i][2]),h(f[i][0]-15,(f[i][1] = f[i][1] + f[i][2])-14,'.3&;,7C6!A"GD@T#C D1T0M:*"5.3 ',"#C90")
+        f[i][1]>=d?n=[]]:1,hh(f[i][0] ,f[i][1] = f[i][1] + f[i][2]),h(f[i][0]-15,(f[i][1] = f[i][1] + f[i][2])-14,'.3&;,7C6!A"GD@T#C D1T0M:*"5.3 ',"#C90")
     h(0,0,'JaHY=S2S-T/N2R-K-L)R*O-R)S#SX_%O b)Y(Y(V+U*^0V.b5[-[2U3V5X2Y=b5LJa',"#8D1919");
     c.fillText(q, d*0.7, d*0.9);
     setTimeout(n, 16);
