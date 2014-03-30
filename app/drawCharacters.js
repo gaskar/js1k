@@ -2,6 +2,10 @@
  * Created by shushanik on 2/21/14.
  */
 
+var a = document.getElementById('thecanvas');
+var b = document.body;
+var c = a.getContext('2d');
+
 
 function hardcodedHobbit(c,xoff, yoff){
 
@@ -66,31 +70,22 @@ function hardcodedHobbit(c,xoff, yoff){
     c.bezierCurveTo( 263 + xoff, 215 + yoff, 191 + xoff, 246 + yoff, 198 + xoff, 157 + yoff );
     c.fill();
     c.stroke();
-    c.beginPath();
 
+   //hair
 
-    c.moveTo( 183 + xoff, 168 + yoff );
-    c.bezierCurveTo( 192 + xoff, 173 + yoff, 175 + xoff, 185 + yoff, 200 + xoff, 193 + yoff );
-    c.moveTo( 183 + xoff, 167 + yoff );
-    c.bezierCurveTo( 193 + xoff, 173 + yoff, 190 + xoff, 179 + yoff, 200 + xoff, 180 + yoff );
-    c.fill();
-    c.stroke();
-
-    /*hair*/
     c.beginPath();
     c.fillStyle="#CC9900";
-
-    c.moveTo( 197 + xoff, 177 + yoff );
-    c.bezierCurveTo( 183 + xoff, 170 + yoff, 193 + xoff, 145 + yoff, 201 + xoff, 158 + yoff );
-
-    c.moveTo( 257 + xoff, 173 + yoff );
-    c.bezierCurveTo( 237 + xoff, 181 + yoff, 197 + xoff, 177 + yoff, 198 + xoff, 149  + yoff);
-
-    c.moveTo( 257 + xoff, 173  + yoff);
-    c.bezierCurveTo( 261 + xoff, 159 + yoff, 218 + xoff, 133 + yoff, 198 + xoff, 149 + yoff );
+    c.moveTo( 193 + xoff, 219 + yoff );
+    c.bezierCurveTo( 157 + xoff, 177 + yoff, 219 + xoff, 204 + yoff, 211 + xoff, 160 + yoff );
+    c.bezierCurveTo( 235 + xoff, 164 + yoff, 208 + xoff, 182 + yoff, 231 + xoff, 184 + yoff );
+    c.bezierCurveTo( 243 + xoff, 175 + yoff, 236 + xoff, 171 + yoff, 228 + xoff, 155 + yoff );
+    c.bezierCurveTo( 269 + xoff, 186 + yoff, 235 + xoff, 180 + yoff, 237 + xoff, 215 + yoff );
+    c.bezierCurveTo( 275 + xoff, 188 + yoff, 252 + xoff, 138 + yoff, 207 + xoff, 153 + yoff );
+    c.bezierCurveTo( 201 + xoff, 173 + yoff, 164 + xoff, 179 + yoff, 192 + xoff, 218 + yoff );
 
     c.closePath();
-    c.fill()
+    c.fill();
+    c.stroke();
 
 }
 
@@ -138,6 +133,23 @@ function drawFireo(c, xoff, yoff){
 
 }
 
+function drawHair(c,xoff, yoff){
+c.beginPath();
+c.fillStyle="#CC9900";
+c.moveTo( 143 + xoff, 212 + yoff );
+c.bezierCurveTo( 127 + xoff, 170 + yoff, 169 + xoff, 197 + yoff, 161 + xoff, 153 + yoff );
+c.bezierCurveTo( 185 + xoff, 157 + yoff, 158 + xoff, 175 + yoff, 181 + xoff, 177 + yoff );
+c.bezierCurveTo( 193 + xoff, 163 + yoff, 186 + xoff, 164 + yoff, 178 + xoff, 148 + yoff );
+c.bezierCurveTo( 219 + xoff, 179 + yoff, 185 + xoff, 173 + yoff, 187 + xoff, 208 + yoff );
+c.bezierCurveTo( 225 + xoff, 181 + yoff, 202 + xoff, 131 + yoff, 157 + xoff, 146 + yoff );
+c.bezierCurveTo( 151 + xoff, 166 + yoff, 114 + xoff, 172 + yoff, 142 + xoff, 211 + yoff );
+
+c.closePath();
+    c.fill();
+    c.stroke();
+}
+
+// drawHair(c,0,0);
 //hardcodedHobbit(c,0,0);
 //hardcodedDragon(c,0,0);
 //drawFire(c,0,0)
