@@ -1,76 +1,69 @@
-i = 0,r = 99,q=0,d=a.height,f = [1,1,1,1,1];
+i = 0,r = 99,q=0,d=a.height=600,w= a.width=600,f = [1,1,1,1,1],l=.3;
 for(i in f)
-    f[i]=[Math.random() * 700, 0, .7];
+    f[i]=[100 + Math.random() * 400, 0];
 
 function n(){
-    c.beginPath(),c.fillStyle="#FFF",c.fillRect(0,0,d,d),c.font = '6em Arial'
+    c.beginPath(),c.fillStyle='#FFF',c.fillRect(0,0,w,d)
     for(i in f)
-        f[i][1]>=d?n=[]:t(e=f[i][0] ,y=f[i][1] = f[i][1] + f[i][2]),h(e-15,y-14,'.3&;,7C6!A"GD@T#C D1T0M:*"5.3',"C90")
-    h(0,0,'JaHY=S2S-T/N2R-K-L)R*O-R)S#SX_%O b)Y(Y(V+U*^0V.b5[-[2U3V5X2Y=b5LJa',"600");
-    c.fillText(q, d*.8, d*.8);
+        f[i][1]>=d?n=[]:t(e=f[i][0] ,y=f[i][1] = f[i][1] + l),h(e+5,y+10,'.3&;,7C6!A"GD@T#C D1T0M:*"5.3','C90',1)
+    h(0,0,'JaHY=S2S-T/N2R-K-L)R*O-R)S#SX_%O b)Y(Y(V+U*^0V.b5[-[2U3V5X2Y=b5LJa','600',6);
     setTimeout(n, 16);
 }
 
 function m(x,y){
     var k = 1;
     +function n() {
-        h(x, y, '>^>U]:o6rCf>a:LD[*i#m,^(B(;jn"qb$4 ;044/@@EFF(?', 'F90')
+        h(x, y, '>^>U]:o6rCf>a:LD[*i#m,^(B(;jn"qb$4 ;044/@@EFF(?', 'F90',1)
         k++<25?setTimeout(n, 16):1
     }();
 }
 
 onclick = function(e) {
     for(i in f)
-        if(0 < e.x - f[i][0] && e.x - f[i][0] < r && 0 < e.y - f[i][1] && e.y - f[i][1] < r){
-            q++;
+        if(0 < e.clientX - f[i][0] && e.clientX - f[i][0] < r && 0 < e.clientY - f[i][1] && e.clientY - f[i][1] < r){
             m(f[i][0],f[i][1]);
             f[i][1] = -r;
-            f[i][2] += .3;
-            f[i][0] = Math.random() * 700;
+            l+=.1;
+            f[i][0] = 100 + Math.random() * 400;
             break
         }
+
 }
 
 n()
 
 function t(x, y){
-    x-=20;
-    y-=20;
     var s = '؀1X4_$MW͓JplDN9r9r7iFbJpذMW]*POT࿀9TVQ7^9T໚Dsrc}}Cs>rf}>s໚N=i4nHQD4<8V*W-B໚4!(<VML',j = 1;
     for(u = 0; u < s.length;) {
-        j = s.charCodeAt(u++);
-        p=s.charCodeAt(u++).toString(16);
+        j=s.charCodeAt(u++);
+        p=s.charCodeAt(u++);
         c.beginPath();
-        c.fillStyle='#'+p;
-        for(b = u; b < u + (j * 8);)
-            c.moveTo( s.charCodeAt(b++) + x, s.charCodeAt(b++) + y ),c.bezierCurveTo(s.charCodeAt(b++)+x,
-                    s.charCodeAt(b++)+y,
-                    s.charCodeAt(b++)+x,
-                    s.charCodeAt(b++)+y,
-                    s.charCodeAt(b++)+x,
-                    s.charCodeAt(b++)+y);
+        c.fillStyle='#'+p.toString(16);
+        for(b = u; b < u + (j * 8);) {
+            c.moveTo(s.charCodeAt(b++) + x, s.charCodeAt(b++) + y), c.bezierCurveTo(s.charCodeAt(b++) + x,
+                    s.charCodeAt(b++) + y,
+                    s.charCodeAt(b++) + x,
+                    s.charCodeAt(b++) + y,
+                    s.charCodeAt(b++) + x,
+                    s.charCodeAt(b++) + y);
+        }
         u=b;
         c.fill();
-        c.stroke();
     }
-
-    c.closePath();
 
 }
 
-function h(x,y,s,p) {
+function h(x,y,s,p,k) {
     c.beginPath();
     c.fillStyle='#'+p;
     b=0;
-    c.moveTo(s.charCodeAt(b++)+x, s.charCodeAt(b++)+y);
+    c.moveTo(s.charCodeAt(b++)*k+x, s.charCodeAt(b++)*k+y);
     for(;b<s.length;)
-        c.bezierCurveTo(s.charCodeAt(b++)+x,
-                s.charCodeAt(b++)+y,
-                s.charCodeAt(b++)+x,
-                s.charCodeAt(b++)+y,
-                s.charCodeAt(b++)+x,
-                s.charCodeAt(b++)+y);
-    c.closePath();
+        c.bezierCurveTo(s.charCodeAt(b++)*k+x,
+                s.charCodeAt(b++)*k+y,
+                s.charCodeAt(b++)*k+x,
+                s.charCodeAt(b++)*k+y,
+                s.charCodeAt(b++)*k+x,
+                s.charCodeAt(b++)*k+y);
     c.fill();
-    c.stroke();
 }
