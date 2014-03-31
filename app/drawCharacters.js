@@ -131,19 +131,13 @@ function drawHair(c,xoff, yoff){
 c.beginPath();
 c.fillStyle="#CC9900";
 
- xoff-=15;
- yoff-=14;
-
-c.moveTo( 46+ xoff, 51+ yoff);
-c.bezierCurveTo( 38+ xoff, 30+ yoff , 59+ xoff, 44+ yoff , 55+ xoff, 22+ yoff  );
-c.moveTo(  55+ xoff, 22+ yoff);
-c.bezierCurveTo( 67+ xoff, 24+ yoff , 54+ xoff, 33+ yoff , 65+ xoff, 34+ yoff  );
-// c.moveTo( 65+ xoff, 34+ yoff);
-c.bezierCurveTo( 71+ xoff, 27+ yoff , 68+ xoff, 27+ yoff , 64+ xoff, 19+ yoff  );
-c.moveTo( 64+ xoff, 19+ yoff);
-c.bezierCurveTo( 84+ xoff, 35+ yoff , 67+ xoff, 32+ yoff , 68+ xoff, 49+ yoff  );
-c.bezierCurveTo( 84+ xoff, 48+ yoff , 77+ xoff, 10+ yoff , 58+ xoff, 13+ yoff  );
-c.bezierCurveTo( 42+ xoff, 14+ yoff , 34+ xoff, 53+ yoff , 46+ xoff, 51+ yoff  );
+c.moveTo( 31+ xoff, 37+ yoff);
+c.bezierCurveTo( 23+ xoff, 16+ yoff , 44+ xoff, 30+ yoff , 40+ xoff, 8+ yoff  );
+c.bezierCurveTo( 52+ xoff, 14+ yoff , 39+ xoff, 19+ yoff , 50+ xoff, 20+ yoff  );
+c.bezierCurveTo( 56+ xoff, 13+ yoff , 53+ xoff, 13+ yoff , 49+ xoff, 5+ yoff  );
+c.bezierCurveTo( 69+ xoff, 21+ yoff , 52+ xoff, 18+ yoff , 53+ xoff, 35+ yoff  );
+c.bezierCurveTo( 69+ xoff, 34+ yoff , 62+ xoff, 1+ yoff , 43+ xoff, 1+ yoff  );
+c.bezierCurveTo( 27+ xoff, 1+ yoff , 19+ xoff, 39+ yoff , 31+ xoff, 37+ yoff  );
 
 
 
@@ -153,8 +147,30 @@ c.bezierCurveTo( 42+ xoff, 14+ yoff , 34+ xoff, 53+ yoff , 46+ xoff, 51+ yoff  )
 
 }
 
+
+function trying(c){
+
+c.beginPath();
+c.fillStyle="#CC9900";
+c.moveTo( 711, 126 );
+c.bezierCurveTo( 459, 265, 553, 269, 209, 88 );
+
+c.moveTo( 209, 89 );
+c.bezierCurveTo( 225, 25, 460, 0, 605, 68 );
+
+c.moveTo( 604, 67 );
+c.bezierCurveTo( 683, 84, 594, 96, 712, 129 );
+
+c.closePath();
+
+c.fill();
+c.stroke();
+
+
+}
+
   
-// hardcodedHobbito(c,0,0);
-// drawHair(c,0,0);  
+hardcodedHobbito(c,0,0);
+drawHair(c,0,0);  
 // hardcodedDragono(c,0,0);
-drawFireo(c,0,0);
+// trying(c);
