@@ -5,7 +5,7 @@ for(i in f)
 function n(){
     c.beginPath(),c.fillStyle="#FFF",c.fillRect(0,0,d,d),c.font = '6em Arial'
     for(i in f)
-        f[i][1]>=d?n=[]:t(e=f[i][0] ,y=f[i][1] = f[i][1] + f[i][2]),h(e,y,'.3&;,7C6!A"GD@T#C D1T0M:*"5.3 ',"C90")
+        f[i][1]>=d?n=[]:t(e=f[i][0] ,y=f[i][1] = f[i][1] + f[i][2]),h(e-15,y-14,'.3&;,7C6!A"GD@T#C D1T0M:*"5.3',"C90")
     h(0,0,'JaHY=S2S-T/N2R-K-L)R*O-R)S#SX_%O b)Y(Y(V+U*^0V.b5[-[2U3V5X2Y=b5LJa',"600");
     c.fillText(q, d*.8, d*.8);
     setTimeout(n, 16);
