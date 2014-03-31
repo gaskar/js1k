@@ -9,39 +9,35 @@ var c = a.getContext('2d');
 
 function hardcodedHobbito(c,xoff, yoff){
 
-    xoff-=20;
-    yoff-=20;//TODO: substract 140 from all :P
-    /*body*/
     c.beginPath();
-    c.fillStyle="#600";
-    c.moveTo( 49 + xoff, 88 + yoff );
-    c.bezierCurveTo( 26 + xoff, 52 + yoff, 95 + xoff, 36 + yoff, 77 + xoff, 87 + yoff );
+    c.fillStyle="#353"
+    c.moveTo( 57 + xoff, 92 + yoff );
+    c.bezierCurveTo( 88 + xoff, 48 + yoff, 1 + xoff, 58 + yoff, 37 + xoff, 94 + yoff );
+
+    c.moveTo( 37 + xoff, 94 + yoff );
+    c.bezierCurveTo( 35 + xoff, 95 + yoff, 50 + xoff, 78 + yoff, 54 + xoff, 92 + yoff);
     c.fill();
     c.stroke();
 
-
     c.beginPath();
-    c.fillStyle="#353"
-    c.moveTo( 74 + xoff, 112 + yoff );
-    c.bezierCurveTo( 108 + xoff, 68 + yoff, 10 + xoff, 78 + yoff, 57 + xoff, 114 + yoff );
-
-    c.moveTo( 57 + xoff, 114 + yoff );
-    c.bezierCurveTo( 55 + xoff, 105 + yoff, 70 + xoff, 98 + yoff, 74 + xoff, 112 + yoff);
+    c.fillStyle="#600";
+    c.moveTo( 32 + xoff, 71 + yoff );
+    c.bezierCurveTo( 9 + xoff, 35 + yoff, 78 + xoff, 19 + yoff, 61 + xoff, 71 + yoff );
     c.fill();
     c.stroke();
 
     /*goti :P */
     c.beginPath();
     c.fillStyle="#663300";
-    c.moveTo( 77 + xoff, 87 + yoff );
-    c.bezierCurveTo( 29 + xoff, 92 + yoff, 42 + xoff, 80 + yoff, 79 + xoff, 84 + yoff );
+    c.moveTo( 60 + xoff, 70 + yoff );
+    c.bezierCurveTo( 12 + xoff, 75 + yoff, 25 + xoff, 63 + yoff, 62 + xoff, 67 + yoff );
     c.fill();
     c.stroke();
 
     c.beginPath();
     c.fillStyle="#FFCC00";
-    c.moveTo( 57 + xoff, 84 + yoff );
-    c.bezierCurveTo( 86 + xoff, 81 + yoff, 55 + xoff, 94 + yoff, 57 + xoff, 84 + yoff );
+    c.moveTo( 40 + xoff, 67 + yoff );
+    c.bezierCurveTo( 69 + xoff, 64 + yoff, 38 + xoff, 77 + yoff, 40 + xoff, 67 + yoff );
     c.fill();
     c.stroke();
 
@@ -49,22 +45,22 @@ function hardcodedHobbito(c,xoff, yoff){
     c.beginPath();
     c.fillStyle="#EDA";
 
-    c.moveTo( 68 + xoff, 115 + yoff );
-    c.bezierCurveTo( 114 + xoff, 99 + yoff, 125 + xoff, 125 + yoff, 67 + xoff, 115 + yoff );
+    c.moveTo( 48 + xoff, 95 + yoff );
+    c.bezierCurveTo( 94 + xoff, 79 + yoff, 105 + xoff, 105 + yoff, 47 + xoff, 95 + yoff );
 
-    c.moveTo( 62 + xoff, 114 + yoff );
-    c.bezierCurveTo( 5 + xoff, 102 + yoff, 15 + xoff, 125 + yoff, 62 + xoff, 115  + yoff);
+    c.moveTo( 42 + xoff, 94 + yoff );
+    c.bezierCurveTo( 1 + xoff, 82 + yoff, 1 + xoff, 105 + yoff, 42 + xoff, 95  + yoff);
     c.fill();
     c.stroke();
 
     c.beginPath();
     c.fillStyle = "#EDA";
 
-    c.moveTo( 78 + xoff, 61  + yoff);
-    c.bezierCurveTo( 105 + xoff, 52 + yoff, 110 + xoff, 72 + yoff, 81 + xoff, 68 + yoff );
+    c.moveTo( 61 + xoff, 44  + yoff);
+    c.bezierCurveTo( 88 + xoff, 35 + yoff, 83 + xoff, 55 + yoff, 64 + xoff, 51 + yoff );
 
-    c.moveTo( 52 + xoff, 60 + yoff );
-    c.bezierCurveTo( 56 + xoff, 86 + yoff, 42 + xoff, 87 + yoff, 45 + xoff, 66 + yoff );
+    c.moveTo( 35 + xoff, 43 + yoff );
+    c.bezierCurveTo( 39 + xoff, 69 + yoff, 25 + xoff, 70 + yoff, 28 + xoff, 49 + yoff );
     c.fill();
     c.stroke();
 
@@ -72,8 +68,8 @@ function hardcodedHobbito(c,xoff, yoff){
     /*head*/
     c.beginPath();
     c.fillStyle="#EDA";
-    c.moveTo( 52 + xoff, 33 + yoff );
-    c.bezierCurveTo( 40 + xoff, 60 + yoff, 86 + xoff, 77+ yoff, 76 + xoff, 26 + yoff );
+    c.moveTo( 32 + xoff, 13 + yoff );
+    c.bezierCurveTo( 20 + xoff, 40 + yoff, 66 + xoff, 57+ yoff, 56 + xoff, 6 + yoff );
 
    
     c.fill();
